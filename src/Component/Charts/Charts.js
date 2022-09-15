@@ -37,7 +37,7 @@ const Charts = () => {
   const barOption = {
     xAxis: {
       type: "category",
-      data: ["1", "2", "3"],
+      data: uniqueAlcoholClassTypes,
       name: "Alcohol category",
     },
     yAxis: {
