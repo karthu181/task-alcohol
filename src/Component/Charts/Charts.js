@@ -32,7 +32,6 @@ const Charts = () => {
     const classWiseAvgMalic = calculateAvgMalic(eachCategory);
     avgMalicClassWiseInArr.push(classWiseAvgMalic);
   });
-  console.log(avgMalicClassWiseInArr);
 
   const barOption = {
     xAxis: {
