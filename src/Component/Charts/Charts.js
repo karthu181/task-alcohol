@@ -61,12 +61,12 @@ const Charts = () => {
   const scatterOption = {
     xAxis: {
       type: "value",
-      data: ["1", "2", "3"],
+      data: uniqueAlcoholClassTypes,
       name: "Color Intensity",
     },
     yAxis: {
       type: "value",
-      data: ["1", "2", "3"],
+      data: uniqueAlcoholClassTypes,
       name: "Hue",
     },
     series: [
