@@ -9,11 +9,14 @@ const Charts = () => {
   //classifying data alcohol class wise in array
   const classwiseArrData = uniqueAlcoholClassTypes.map((eachClass) => {
     //filtering data based on class
-    const filteredArr = chartjson.filter((each) => each.Alcohol === eachClass);
+    const duplicateChartJson = [...chartjson];
+    console.log(duplicateChartJson);
+    const filteredArr = chartjson.filter((each, index) => {
+      return each.Alcohol === eachClass;
+    });
+    console.log(duplicateChartJson);
     return filteredArr;
   });
-
-  console.log(classwiseArrData);
 
   //function to calculate avg malic acid when input is data of each class
   const calculateAvgMalic = (arr) => {
@@ -32,7 +35,6 @@ const Charts = () => {
     const classWiseAvgMalic = calculateAvgMalic(eachCategory);
     avgMalicClassWiseInArr.push(classWiseAvgMalic);
   });
-  console.log(avgMalicClassWiseInArr);
 
   const barOption = {
     xAxis: {
